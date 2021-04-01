@@ -6,12 +6,11 @@ const ManageProduct = () => {
     const [manageProduct, setManageProduct] = useState([]);
 
     useEffect(() => {
-        fetch('https://whispering-wildwood-81901.herokuapp.com/products')
-        // fetch('http://localhost:5500/products')
+        // fetch('https://whispering-wildwood-81901.herokuapp.com/products')
+        fetch('http://localhost:5500/products')
             .then(res => res.json())
             .then(data => setManageProduct(data));
     }, []);
-
 
     // const managePd = document.getElementById('manage-pd');
     // manageProduct.forEach(pd => {
@@ -27,7 +26,7 @@ const ManageProduct = () => {
     //     console.log(pd.name);
     // });
 
-    console.log(manageProduct);
+    // console.log(manageProduct);
 
     return (
         <div className="manage-style">

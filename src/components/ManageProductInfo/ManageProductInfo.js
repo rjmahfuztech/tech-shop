@@ -2,7 +2,8 @@ import React from 'react';
 import './ManageProductInfo.css';
 
 const ManageProductInfo = (props) => {
-    const {name, price} = props.managePdInf;
+    // let {name} = props.managePdInf;
+    // console.log(props.manageProduct)
     return (
         <div className="manageProduct-style">
             <table>
@@ -15,8 +16,8 @@ const ManageProductInfo = (props) => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{name}</td>
-                        <td>{price}</td>
+                        {/* <td>{name}</td> */}
+                        {/* <td>{price}</td> */}
                         <td><button>Delete</button></td>
                     </tr>
                 </tbody>

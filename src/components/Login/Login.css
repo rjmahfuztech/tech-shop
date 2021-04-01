@@ -1,0 +1,10 @@
+.login-style{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-shadow: 5px 5px 10px rgb(185, 177, 177);
+}
+.login-style h2{
+    margin-bottom: 30px;
+    font-family: tahoma;
+}

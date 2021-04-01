@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import './Login.css';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -40,10 +41,9 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className="login-style text-center mt-5">
             <h2>Sign In with google</h2>
-            <button onClick={handleGoogleSignIn}>Continue with google</button>
-
+            <button className="btn btn-success" onClick={handleGoogleSignIn}>Continue with google</button>
         </div>
     );
 };

@@ -16,6 +16,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddProduct from './components/AddProduct/AddProduct';
 import ManageProduct from './components/ManageProduct/ManageProduct';
+import Header from './components/Header/Header';
 
 export const UserContext = createContext();
 
@@ -24,26 +25,8 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        <div className="container root-style">
-          <nav>
-            <ul className="d-flex justify-content-end">
-              <li>
-                <Link className="nav" to="/home">Home</Link>
-              </li>
-              <li>
-                <Link className="nav" to="/orders">Orders</Link>
-              </li>
-              <li>
-                <Link className="nav" to="/admin">Admin</Link>
-              </li>
-              <li>
-                <Link className="nav" to="/deals">Deals</Link>
-              </li>
-              <li className="login">
-                <Link className="nav" to="/login">Login</Link>
-              </li>
-            </ul>
-          </nav>
+        <div className="container">
+          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
