@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import { UserContext } from '../../App';
 
 const AddProduct = () => {
     const { register, handleSubmit, watch, errors } = useForm();
@@ -22,13 +21,13 @@ const AddProduct = () => {
             body: JSON.stringify(productData)
         })
         .then(res => {
-            console.log('okkkk', res);
+            console.log('product added', res);
         })
     };
 
 
     const handleImgUpload = event => {
-        console.log(event.target.files[0]);
+        // console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '1a22bc8f0079d4bfb66019a7d15dda3e');
         imageData.append('image', event.target.files[0]);

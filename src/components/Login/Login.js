@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -14,7 +14,6 @@ else {
 }
 
 const Login = () => {
-    const [user, setUser] = useState({});
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
     const location = useLocation();
@@ -32,13 +31,14 @@ const Login = () => {
                 };
                 setLoggedInUser(userInfo);
                 history.replace(from);
-                setUser(userInfo);
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
             });
     }
-    console.log(user);
+
+
+
     return (
         <div>
             <h2>Sign In with google</h2>

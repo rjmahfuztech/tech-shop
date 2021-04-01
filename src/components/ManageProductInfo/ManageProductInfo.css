@@ -1,0 +1,8 @@
+.manageProduct-style table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.manageProduct-style table th, .manageProduct-style table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}

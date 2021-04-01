@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import './HomeInfo.css';
 
 const HomeInfo = (props) => {
-    const {name, imgURL, _id} = props.product;
+    const {name, price, imgURL, _id} = props.product;
 
     const history = useHistory();
     const handleClick = (useId) => {
@@ -11,16 +11,18 @@ const HomeInfo = (props) => {
         history.push(url);
     }
     return (
-        <div className="card home-info-style container col-md-3" style={{ width: "18rem"}}>
+        <div className="card home-info-style">
+            <div className="text-center">
             <img className="card-img-top" src={imgURL} alt="" />
+            </div>
             <div className="card-body">
                 <p className="card-text">{name}</p>
-                <div className="row justify-content-between">
+                <div className="row justify-content-around">
                     <div className="">
-                        <p>$50</p>
+                        <h4>${price}</h4>
                     </div>
                     <div className="">
-                        <button onClick={() => handleClick(_id)}>Buy Now</button>
+                        <button className="btn btn-success"onClick={() => handleClick(_id)}>Buy Now</button>
                     </div>
                 </div>
             </div>
