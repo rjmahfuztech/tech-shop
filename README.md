@@ -1,6 +1,6 @@
 # Welcome to my tech-shop full stack project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is live link [https://tech-shops.netlify.app/](https://tech-shops.netlify.app/).
 
 ## About The Project
 

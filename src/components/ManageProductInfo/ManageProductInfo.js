@@ -11,7 +11,7 @@ const ManageProductInfo = (props) => {
         fetch(`https://whispering-wildwood-81901.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => {
-                const update = document.getElementById('update');
+                // const update = document.getElementById('update');
                 // update.innerHTML = `
                 // <h4>Update: ${data._id}</h4>
                 // Name: <input type="text" value="${data.name}" id="name">
