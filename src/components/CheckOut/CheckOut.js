@@ -15,7 +15,6 @@ const CheckOut = () => {
     }, [byId]);
 
     const {name, price} = productDetail;
-    console.log(productDetail);
 
     const handleCheckOut = () => {
         const newOrder = {...loggedInUser, ...productDetail, orderTime: new Date()};

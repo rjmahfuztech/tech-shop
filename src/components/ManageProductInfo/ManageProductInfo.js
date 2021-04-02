@@ -6,30 +6,23 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const ManageProductInfo = (props) => {
     const { name, price, _id } = props.managePdInformation;
-    // console.log(props.managePdInformation);
 
     const loadProduct = (id) => {
-        fetch(`http://localhost:5500/products/${id}`)
+        fetch(`https://whispering-wildwood-81901.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => {
                 const update = document.getElementById('update');
-                update.innerHTML = `
-                <h4>Update: ${data._id}</h4>
-                Name: <input type="text" value="${data.name}" id="name">
-                Price: <input type="text" value="${data.price}" id="price">
-                <button onclick="updateProduct">Update</button>
-                `;
+                // update.innerHTML = `
+                // <h4>Update: ${data._id}</h4>
+                // Name: <input type="text" value="${data.name}" id="name">
+                // Price: <input type="text" value="${data.price}" id="price">
+                // <button onclick="updateProduct">Update</button>
+                // `;
             })
     }
 
-
-    // document.getElementById('up').addEventListener('click', function(){
-    //     console.log('clicked');
-    // })
-
-    // delete specific product
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5500/delete/${id}`, {
+        fetch(`https://whispering-wildwood-81901.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

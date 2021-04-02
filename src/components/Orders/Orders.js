@@ -14,7 +14,6 @@ const Orders = () => {
             .then(data => setOrders(data));
     }, []);
 
-    // console.log(name);
     return (
         <div className="container">
             <h2 className="mb-5">Welcome {name} Here is your order</h2>

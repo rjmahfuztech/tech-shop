@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 const AddProduct = () => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit} = useForm();
     const [imgURL, setImgURL] = useState(null);
 
     const onSubmit = data => {
@@ -27,7 +27,6 @@ const AddProduct = () => {
 
 
     const handleImgUpload = event => {
-        // console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '1a22bc8f0079d4bfb66019a7d15dda3e');
         imageData.append('image', event.target.files[0]);
@@ -43,14 +42,14 @@ const AddProduct = () => {
 
     return (
         <div>
+            <h2 className="mb-5">Add Product</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="name" placeholder="Enter product name" ref={register({ required: true })} />
+                <input className="form-control" name="name" placeholder="Enter product name" ref={register({ required: true })} />
                 <br />
-                <input name="price" placeholder="Enter product price" ref={register({ required: true })} />
+                <input className="form-control" name="price" placeholder="Enter product price" ref={register({ required: true })} />
                 <br />
                 <input name="image" type="file" onChange={handleImgUpload} ref={register({ required: true })} />
-                <br />
-                <input type="submit" />
+                <input className="btn btn-success" type="submit" />
             </form>
         </div>
     );

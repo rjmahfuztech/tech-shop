@@ -1,6 +1,6 @@
 import React from 'react';
 import './OrderInfo.css';
- // (new Date(OrderTime).toDateString('dd/MM/yyyy'))
+
 const OrderInfo = (props) => {
     const {name, price, orderTime} = props.order;
     return (
@@ -12,7 +12,7 @@ const OrderInfo = (props) => {
             <p><b>${price}</b></p>
             </div>
             <div className="col col-md-3">
-            <p><b>{orderTime}</b></p>
+            <p><b>{(new Date(orderTime).toDateString('dd/MM/yyyy'))}</b></p>
             </div>
         </div>
     );

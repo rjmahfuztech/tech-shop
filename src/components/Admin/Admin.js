@@ -7,7 +7,7 @@ const Admin = () => {
 
     const handleAddProduct = () => {
         const addProduct = document.getElementById('style-add-product');
-        const manageProduct = document.getElementById('style-add-product');
+        const manageProduct = document.getElementById('style-manage-product');
         manageProduct.style.display = 'none';
         addProduct.style.display = 'block';
 
@@ -18,14 +18,15 @@ const Admin = () => {
         const addProduct = document.getElementById('style-add-product');
         manageProduct.style.display = 'block';
         addProduct.style.display = 'none';
-        // console.log('ok');
     }
 
     return (
         <div className="container">
             <h2>Admin Panel</h2>
-            <button onClick={handleAddProduct}>Add Product</button>
-            <button onClick={handleManageProduct}>Manage Product</button>
+            <div className="btn-style">
+            <b onClick={handleAddProduct}>Add Product</b>
+            <b onClick={handleManageProduct}>Manage Product</b>
+            </div>
             <br/>
             <br/>
             <div id="style-add-product" className="style-addProduct">
