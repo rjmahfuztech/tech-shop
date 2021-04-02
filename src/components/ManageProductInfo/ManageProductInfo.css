@@ -1,8 +1,22 @@
-.manageProduct-style table{
-    border-collapse: collapse;
-    width: 100%;
+.action-style button{
+    border: none;
+    border-radius: 10px;
+    background-color: none;
+    color: rgb(15, 184, 15);
 }
-.manageProduct-style table th, .manageProduct-style table td{
-    border: 1px solid #ddd;
-    padding: 8px;
+.action-style button:hover{
+    border: none;
+    background-color: rgb(15, 184, 15);
+    color: #fff;
+}
+.action-style .delete{
+    border: none;
+    background-color: none;
+    color: red;
+    margin-left: 2px;
+}
+.action-style .delete:hover{
+    background-color: red;
+    color: #fff;
+    margin-left: 2px;
 }

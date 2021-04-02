@@ -2,17 +2,6 @@
     display: grid;
 }
 
-/* @media (max-width: 1399px) {
-    .home-style{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 1199px) {
-    .home-style{
-        grid-template-columns: repeat(3, 1fr);
-    }
-} */
 
 @media (min-width: 767px) {
     .home-style{

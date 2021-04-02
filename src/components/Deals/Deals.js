@@ -2,8 +2,8 @@ import React from 'react';
 
 const Deals = () => {
     return (
-        <div>
-            <h2>This is deals</h2>
+        <div className="text-center">
+            <h2>Right now, here is no deals</h2>
         </div>
     );
 };

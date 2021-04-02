@@ -6,21 +6,20 @@ import { UserContext } from '../../App';
 const CheckOut = () => {
     const { byId } = useParams();
     const [loggedInUser] = useContext(UserContext);
-    const [productDetail, setProductDetail] = useState([]);
+    const [productDetail, setProductDetail] = useState({});
 
     useEffect(() => {
-        // fetch('https://whispering-wildwood-81901.herokuapp.com/products')
-        fetch('http://localhost:5500/products')
+        fetch(`https://whispering-wildwood-81901.herokuapp.com/products/${byId}`)
             .then(res => res.json())
             .then(data => setProductDetail(data));
-    }, []);
+    }, [byId]);
 
-    const selectedProduct = productDetail.find(pd => pd._id === byId);
-    console.log(selectedProduct);
+    const {name, price} = productDetail;
+    console.log(productDetail);
 
     const handleCheckOut = () => {
-        const newOrder = {...loggedInUser, ...selectedProduct, orderTime: new Date()};
-        fetch('http://localhost:5500/addOrder', {
+        const newOrder = {...loggedInUser, ...productDetail, orderTime: new Date()};
+        fetch('https://whispering-wildwood-81901.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(newOrder)
@@ -46,9 +45,9 @@ const CheckOut = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><h5>{selectedProduct?.name}</h5></td>
+                        <td><h5>{name}</h5></td>
                         <td><h5 className="pl-3">1</h5></td>
-                        <td><h5>${selectedProduct?.price}</h5></td>
+                        <td><h5>${price}</h5></td>
                     </tr>
                 </tbody>
             </table>

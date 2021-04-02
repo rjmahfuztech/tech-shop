@@ -4,8 +4,7 @@ import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Orders from './components/Orders/Orders';
 import Admin from './components/Admin/Admin';
@@ -15,17 +14,17 @@ import Login from './components/Login/Login';
 import CheckOut from './components/CheckOut/CheckOut';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddProduct from './components/AddProduct/AddProduct';
-import ManageProduct from './components/ManageProduct/ManageProduct';
 import Header from './components/Header/Header';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <div className="container">
       <Router>
-        <div className="container">
           <Header />
           <Switch>
             <Route exact path="/">
@@ -34,12 +33,12 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/orders">
+            <PrivateRoute path="/orders">
               <Orders />
-            </Route>
-            <Route path="/admin">
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
               <Admin />
-            </Route>
+            </PrivateRoute>
             <Route path="/deals">
               <Deals />
             </Route>
@@ -52,15 +51,12 @@ function App() {
             <Route path="/addProduct">
               <AddProduct />
             </Route>
-            <Route path="/manageProduct">
-              <ManageProduct />
-            </Route>
             <Route path="*">
               <NotFound />
             </Route>
           </Switch>
-        </div>
       </Router>
+      </div>
     </UserContext.Provider>
   );
 }
