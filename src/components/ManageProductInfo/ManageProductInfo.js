@@ -21,14 +21,14 @@ const ManageProductInfo = (props) => {
             })
     }
 
-    const deleteProduct = (e, id) => {
+    const deleteProduct = (event, id) => {
         fetch(`https://whispering-wildwood-81901.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
             .then(result => {
                 if(result){
-                    e.target.parentNode.style.display = 'none';
+                    event.target.parentNode.style.display = 'none';
                     alert('Product deleted successfully');
                 }
             })
@@ -45,7 +45,7 @@ const ManageProductInfo = (props) => {
                 </div>
                 <div className="col col-md-3 action-style">
                     <button onClick={() => loadProduct(_id)}><FontAwesomeIcon icon={faEdit} /></button>
-                    <button className="delete" onClick={(e) => deleteProduct(e, _id)}><FontAwesomeIcon icon={faTrash} /></button>
+                    <button className="delete" onClick={(event) => deleteProduct(event, _id)}><FontAwesomeIcon icon={faTrash} /></button>
                 </div>
             </div>
             <div id="update">
