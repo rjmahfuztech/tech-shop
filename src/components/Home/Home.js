@@ -8,8 +8,7 @@ const Home = () => {
     const [searchProduct, setSearchProduct] = useState('');
 
     useEffect(() => {
-        // fetch('https://whispering-wildwood-81901.herokuapp.com/products')
-        fetch('http://localhost:5500/products?search='+ searchProduct)
+        fetch('https://whispering-wildwood-81901.herokuapp.com/products?search='+ searchProduct)
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [searchProduct]);
