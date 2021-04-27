@@ -20,7 +20,6 @@ const ManageProduct = () => {
                 <div className="col col-md-2"><h5>Price</h5></div>
                 <div className="col col-md-3"><h5>Action</h5></div>
             </div>
-            
             {
                 manageProduct.map(managePdInfo => <ManageProductInfo key={managePdInfo._id} managePdInformation={managePdInfo}></ManageProductInfo>)
             }

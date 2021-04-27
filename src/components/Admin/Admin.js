@@ -23,12 +23,12 @@ const Admin = () => {
     return (
         <div className="container">
             <h2>Admin Panel</h2>
-            <div className="btn-style">
-            <b onClick={handleAddProduct}>Add Product</b>
-            <b onClick={handleManageProduct}>Manage Product</b>
+            <div className="btn-style row justify-content-end">
+                <b onClick={handleAddProduct}>Add Product</b>
+                <b onClick={handleManageProduct}>Manage Product</b>
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <div id="style-add-product" className="style-addProduct">
                 <AddProduct></AddProduct>
             </div>

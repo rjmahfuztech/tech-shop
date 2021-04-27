@@ -1,3 +1,16 @@
+.search-section{
+    background-image: url('../../images/productBg.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    margin-top: -71px;
+  }
+.search-section .search-form{
+    padding-top: 130px;
+}
+.search-section .search-form .input-size{
+    width: 50%;
+}
 .home-style{
     display: grid;
 }
@@ -15,12 +28,22 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
+    .search-section{
+        height: 350px;
+        margin-top: 0px;
+      }
 }
 
 @media (max-width: 575px) {
     .home-style{
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
+    }
+    .search-section{
+        height: 300px;
+      }
+    .search-section .search-form .input-size{
+        width: 80%;
     }
 }
 

@@ -14,10 +14,15 @@ const CheckOut = () => {
             .then(data => setProductDetail(data));
     }, [byId]);
 
-    const {name, price} = productDetail;
+    const {name, price, imgURL} = productDetail;
+    const addOrder = {
+        name,
+        price,
+        imgURL
+    }
 
     const handleCheckOut = () => {
-        const newOrder = {...loggedInUser, ...productDetail, orderTime: new Date()};
+        const newOrder = {...loggedInUser, ...addOrder, orderTime: new Date()};
         fetch('https://whispering-wildwood-81901.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},

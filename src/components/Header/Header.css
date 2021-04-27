@@ -1,8 +1,23 @@
-.nav-style .nav{
-  color: rgb(19, 4, 82);
-  font-size: 20px;
-  font-family: tahoma;
+.title-style{
+  font-size: 30px !important;
+  color: rgb(183, 171, 199) !important;
+  font-weight:bold;
 }
-.nav-style .nav:hover{
-  text-decoration: none;
+.nav-link{
+  color: rgb(5, 226, 189) !important;
+}
+.nav-link:hover{
+  color: rgb(251, 136, 4) !important;
+}
+
+@media (max-width: 768px){
+  .title-style{
+    font-size: 25px !important;
+  }
+  .nav-link{
+    color: black !important;
+  }
+  .nav-link:hover{
+    color: rgb(251, 136, 4) !important;
+  }
 }
