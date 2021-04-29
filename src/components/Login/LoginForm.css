@@ -1,0 +1,25 @@
+.login-form{
+    width: 50%;
+    margin: 0 auto;
+}
+.login{
+    color: orange;
+    cursor: pointer;
+}
+.sign-up{
+    color: orange;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .login-form{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media (max-width:575px){
+    .login-form{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
