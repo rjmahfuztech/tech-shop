@@ -49,6 +49,7 @@ const LoginForm = (props) => {
             <div className="text-center mt-5">
                 <button className="btn btn-info" onClick={handleGoogleSignIn}>Continue with google</button>
             </div>
+            <p>d</p>
         </div>
     );
 };
