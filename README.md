@@ -1,7 +1,7 @@
 # Welcome to my tech-shop full stack project
 
 <a href="https://tech-shops.netlify.app/">
-  <img width="100%" height="100%" src="https://i.ibb.co/jVVBLh6/tech-shops.jpg" />
+  <img width="100%" height="100%" src="https://i.ibb.co/jVVBLh6/tech-shops.jpg">
 </a>
 
 + Here is live link [https://tech-shops.netlify.app/](https://tech-shops.netlify.app/).
