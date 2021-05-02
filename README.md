@@ -12,5 +12,3 @@
 3. An authenticated person can give order.
 4. You can add product and also able to manage product.
 
-
-
